@@ -13,3 +13,12 @@
 7. Lambda Function to get data from DynamoDB
 8. API Gateway to call lambda from static website
 9. Display data in static website from API Gateway
+
+### Commands
+
+```
+create s3 bucket
+aws s3 mb --endpoint-url http://localhost:4566 --region us-east-1 "s3://static-s3-bucket"
+
+
+```
