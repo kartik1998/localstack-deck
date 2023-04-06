@@ -20,5 +20,9 @@
 create s3 bucket
 aws s3 mb --endpoint-url http://localhost:4566 --region us-east-1 "s3://static-s3-bucket"
 
+now block public access
+aws s3api --endpoint-url http://localhost:4566 put-public-access-block \
+	--bucket static-s3-bucket \
+	--public-access-block-configuration "BlockPublicAcls=false,IgnorePublicAcls=false,BlockPublicPolicy=false,RestrictPublicBuckets=false"
 
 ```
